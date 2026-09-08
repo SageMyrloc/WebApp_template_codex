@@ -2,11 +2,20 @@
 # This is guidance, not a runtime .env file or an automatic app generator.
 # Use "undecided" for an unresolved choice; use "none" when deliberately omitted.
 # Keep credentials, tokens, connection strings, and personal data out of this file.
-config_version: 1
+config_version: 2
 
 project:
   name: undecided
   description: undecided
+  # Examples: marketing_site, spa, full_stack_app, dashboard, documentation_site, api_service.
+  type: undecided
+
+# Select a shape appropriate to the project; these are editable defaults.
+architecture:
+  # monorepo | single_app
+  repository: monorepo
+  # separate | integrated | frontend_only | backend_only
+  frontend_backend: separate
 
 stack:
   language: TypeScript
@@ -19,8 +28,21 @@ stack:
     component_library: undecided
   backend:
     framework: Fastify
-  database: PostgreSQL
-  orm: Prisma
+  database:
+    engine: PostgreSQL
+    orm: Prisma
+
+tooling:
+  linting: undecided
+  formatting: undecided
+
+testing:
+  unit: undecided
+  component: undecided
+  e2e: undecided
+
+ci:
+  provider: undecided
 
 # Resolve compatible supported versions when scaffolding an app, then pin them
 # in manifests, the lockfile, runtime version files, and container definitions.
@@ -38,7 +60,10 @@ authentication:
 design:
   style: undecided
 
-# Planned directories: create them when implementation needs them.
+# Planned directories: create them only when implementation needs them.
+# Set excluded components and their paths to "none"; do not create placeholders.
+# Integrated apps may use the same frontend/backend path.
+# If database.engine is "none", database.orm must also be "none".
 structure:
   frontend: apps/web
   backend: apps/api

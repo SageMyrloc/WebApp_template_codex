@@ -2,32 +2,64 @@
 
 Status: Planning only; no application has been scaffolded.
 
-## Technology selections
-Read [project.config.yaml](../project.config.yaml) for the agreed defaults.
-Record rationale and implementation details here without duplicating the full configuration.
+## Configuration and system overview
 
-## Planned boundaries
-- apps/web/: frontend interface.
-- apps/api/: server routes, authorization, and business operations.
-- packages/shared/: shared types and validation when needed.
-- docs/: project requirements and decisions.
+Read [project.config.yaml](../project.config.yaml) for selected technologies, application shape, and planned paths.
+This document records observed implementation facts and rationale, not a second set of authoritative defaults.
+No application system exists yet. After scaffolding, describe its actual components and boundaries.
+Flag differences from configuration and assess migration work before changing implementations.
 
-These application directories do not exist yet.
+## Repository layout
 
-## Setup and commands
-No commands are implemented or verified yet.
-When scaffolding, document prerequisites and exact commands for installation, local services, development, linting, type checking, tests, database migrations, and production builds.
+Planned paths are defined in project.config.yaml. Application directories do not exist yet.
+After scaffolding, record the actual layout and explain component responsibilities.
+
+## Frontend
+
+Not implemented. Record routing, state management, and UI boundaries if applicable.
+
+## Backend
+
+Not implemented. Record service boundaries, input validation, and error handling if applicable.
+
+## Data model
+
+Not implemented. Record entities, persistence, and migration procedures if applicable.
+
+## Authentication and authorization
+
+Not implemented. Record identity flows, roles, and enforcement boundaries if applicable.
+
+## External integrations
+
+Not implemented. Record service responsibilities and failure handling if applicable.
 
 ## Runtime configuration
-No runtime environment variables are required yet.
-Add a secret-free .env.example and document each variable when the application needs it.
 
-## Data and integrations
-Undecided. Record the data model, external services, and authentication approach as they are agreed.
+No runtime environment variables are required yet.
+When needed, add a secret-free .env.example and document variable names, purpose, required/optional status, and safe defaults. Never record secrets here.
+
+## Verified commands
+
+No commands are implemented or verified yet.
+After scaffolding, record prerequisites, working directory, exact command, and verification result for applicable operations:
+
+- Installation and local services
+- Development
+- Linting and formatting checks
+- Type checking
+- Unit, component, and end-to-end tests
+- Database migrations
+- Production build
+
+Do not present example or anticipated commands as verified. Mark unavailable checks explicitly.
 
 ## Deployment
-Docker on Hetzner is the configured default. Deployment files and procedures are not implemented yet.
+
+Selections are defined in project.config.yaml. No deployment files or procedures exist yet.
+Record actual build, release, migration, and rollback procedures when implemented.
 
 ## Decision log
+
 Record consequential decisions with their date, rationale, and implications.
-Changing a selected technology after implementation requires assessing migration work.
+Distinguish proposed decisions from implemented facts.

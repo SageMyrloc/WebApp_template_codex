@@ -3,7 +3,26 @@
 Status: Undecided. Establish the visual direction before implementing substantial UI.
 
 ## References
-Add links or repository-relative screenshot paths, with a short explanation of what to adopt from each.
+For each reference, add:
+- Link or repository-relative screenshot path: undecided
+- What to adopt: undecided
+- What not to adopt: undecided
+
+## Brand assets
+- Logo: undecided
+- Icons: undecided
+- Images/illustrations: undecided
+- Fonts: undecided
+
+Record asset locations and usage/licensing constraints when known.
+
+## Breakpoints
+- Mobile: undecided
+- Tablet: undecided
+- Desktop: undecided
+
+Record agreed widths and layout changes when the visual direction is established.
+For projects without a UI, mark this guide not applicable.
 
 ## Visual system
 - Colours and contrast: undecided
