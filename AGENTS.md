@@ -8,10 +8,17 @@
 
 ## Technology choices
 - Use project.config.yaml as the source of truth for selected technologies and planned paths. Do not silently substitute another stack.
+- Keep authoritative technology selections and planned paths only in project.config.yaml. Other documents should link to it; architecture records observed implementation facts and rationale. Flag discrepancies rather than treating stale documentation as configuration.
 - Treat "undecided" as unresolved and "none" as intentionally excluded. Ask only when an unresolved choice materially blocks the current task.
 - The YAML does not switch frameworks or configure the running application. If it differs from existing code, explain the discrepancy and assess migration work before changing implementations.
 - When scaffolding, verify compatible supported dependency versions and pin them in the appropriate manifests, lockfile, runtime files, and container definitions.
 - Keep runtime settings in environment variables; document required names using a secret-free .env.example when needed.
+
+## Project initialization
+- Before scaffolding a new project, review its shape, configuration, brief, and design references. Identify only unresolved decisions that materially block the first milestone.
+- Check that architecture, selected technologies, and planned paths agree. Do not create components or directories marked "none".
+- A frontend-only project needs no separate backend; an API-only project needs no frontend; an integrated application may share one frontend/backend path. A database engine of "none" requires an ORM of "none".
+- During a planning-only task, provide a concise initialization plan without scaffolding. Once the user authorizes scaffolding, implement the agreed configuration and record actual structure and verified commands.
 
 ## Implementation
 - Make routine implementation decisions independently within the agreed scope.
