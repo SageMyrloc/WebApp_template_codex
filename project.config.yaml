@@ -1,0 +1,46 @@
+# Version-controlled project choices for Codex/ChatGPT.
+# This is guidance, not a runtime .env file or an automatic app generator.
+# Use "undecided" for an unresolved choice; use "none" when deliberately omitted.
+# Keep credentials, tokens, connection strings, and personal data out of this file.
+config_version: 1
+
+project:
+  name: undecided
+  description: undecided
+
+stack:
+  language: TypeScript
+  runtime: Node.js
+  package_manager: pnpm
+  frontend:
+    framework: React
+    build_tool: Vite
+    styling: undecided
+    component_library: undecided
+  backend:
+    framework: Fastify
+  database: PostgreSQL
+  orm: Prisma
+
+# Resolve compatible supported versions when scaffolding an app, then pin them
+# in manifests, the lockfile, runtime version files, and container definitions.
+versions:
+  policy: resolve_and_pin_at_scaffolding
+
+deployment:
+  containers: Docker
+  hosting: Hetzner
+  domain: undecided
+
+authentication:
+  provider: undecided
+
+design:
+  style: undecided
+
+# Planned directories: create them when implementation needs them.
+structure:
+  frontend: apps/web
+  backend: apps/api
+  shared: packages/shared
+  documentation: docs
