@@ -3,6 +3,18 @@
 A reusable starting point for building web applications with Codex/ChatGPT.
 This repository contains instructions and planning documents. Application code and tooling are added when a project begins.
 
+## Codex tooling included in the template
+
+New repositories created from this template inherit repo-local Codex skills plus project-scoped MCP configuration.
+
+- **Playwright MCP**: interactive browser inspection and verification for projects with a UI.
+- **Context7 MCP**: current, version-aware library/framework documentation.
+- Skills for feature implementation, bug investigation, database changes, security review, feature review, and release readiness.
+
+The tooling lives under `.codex/` and contains no committed credentials. Codex loads project MCP configuration only for trusted projects. Context7 authentication, if requested, should be completed locally in the Codex client.
+
+Because this is a technology-configurable template, the skills read `project.config.yaml` and the implemented architecture before choosing commands or assuming a frontend, backend, database, or test stack.
+
 ## Start a new application
 
 1. Create a separate repository from this template or copy its contents.
