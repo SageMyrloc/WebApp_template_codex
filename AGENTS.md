@@ -6,6 +6,14 @@
 - This repository starts as an instruction template. Do not assume an application, dependencies, or runnable commands already exist.
 - Follow the user's current instructions. If they change an agreed choice, update the affected configuration and documentation.
 
+## Codex workflows and tools
+- Repository-scoped Codex skills live under `.codex/skills/`. Use the matching skill when its description fits the task instead of recreating the workflow ad hoc.
+- Use `implement-feature` for cross-layer feature work, `bug-investigation` for defects/regressions, `database-change` for persistence/schema changes, `security-review` for security-sensitive review, `review-feature` for independent pre-merge review, and `release-check` for final readiness checks.
+- Project MCP configuration lives in `.codex/config.toml` and is loaded only for trusted projects.
+- Use Context7 when framework/library behaviour is uncertain, current-version-specific, or materially affects correctness.
+- Use Playwright MCP for interactive browser verification when the configured project has a runnable UI. Automated E2E tests remain the repeatable regression suite; MCP browser checks complement rather than replace them.
+- Never store MCP credentials or API keys in repository files.
+
 ## Technology choices
 - Use project.config.yaml as the source of truth for selected technologies and planned paths. Do not silently substitute another stack.
 - Keep authoritative technology selections and planned paths only in project.config.yaml. Other documents should link to it; architecture records observed implementation facts and rationale. Flag discrepancies rather than treating stale documentation as configuration.
